@@ -1,0 +1,46 @@
+<!doctype>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vad ska jag dricka?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="https://avatars3.githubusercontent.com/u/11892109" />
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body style="margin-top: 70px">
+    <nav class="navbar navbar-default	navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Vad ska jag dricka?</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right" shortcuts>
+            <li><a ng-href="#/about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container text-center">
+        <div id="application" v-cloak>
+            <button class="btn btn-default" v-on:click="getNewDrinks">Click me</button>
+            <h4>{{ drinks[0].strDrink }}</h4>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/main.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+</body>
+
+</html>
