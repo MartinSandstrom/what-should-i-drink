@@ -47,7 +47,12 @@ var application = new Vue({
     },
     methods: {
         getNewDrinks: function() {
-            this.message = 'Ye right I am the new kid on the block';
+            var that = this;
+            axios.get('http://www.thecocktaildb.com/api/json/v1/1/random.php').then(function(response){
+                if(response && response.data && response.data.drinks[0]) {
+                    that.drinks = response.data.drinks;
+                }
+            });
         }
     }
 });

@@ -1,1 +1,12 @@
-[v-cloak] { display:none; }
+[v-cloak] {
+    display: none;
+}
+
+.drink-information {
+    margin-top: 20px;
+}
+
+.main-button {
+    margin-top: 20px;
+    height: 55px
+}
