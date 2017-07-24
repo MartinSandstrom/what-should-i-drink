@@ -1,5 +1,12 @@
 var gulp = require('gulp');
 var gls = require('gulp-live-server');
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('serve', function() {
     //1. serve with default settings
     var server = gls.new('app.js');
